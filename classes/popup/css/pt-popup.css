@@ -1,0 +1,202 @@
+.pt-iframe-container {
+    z-index: 99999999999;
+    display: block;
+    border: 0px none transparent;
+    overflow-x: hidden;
+    overflow-y: auto;
+    visibility: visible;
+    margin: 0px;
+    padding: 0px;
+    -webkit-tap-highlight-color: transparent;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+.pt-iframe-container-spinner {
+    background: url(https://cdn.paytomorrow.com/plugins/pictures/pt_spinner.svg) center center no-repeat;
+    background-size: 100px;
+}
+
+.pt-iframe-container.active {
+    opacity: 1;
+    visibility: visible;
+    /* iOS requires a display block */
+    display: block;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+}
+
+.pt-iframe-container > iframe {
+    background: none;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 99999999999;
+}
+
+.pt-iframe-overlay {
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background: #000;
+    opacity: 0.5;
+    position: fixed;
+    -webkit-animation: fadeInOverlay 250ms ease-in-out forwards;
+    animation: fadeInOverlay 250ms ease-in-out forwards;
+}
+
+body.pt-iframe-overlay {
+    overflow: hidden !important;
+    position: fixed !important;
+}
+
+.pt-modal {
+    max-width: 50%;
+}
+
+.pt-main-container {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    height: auto;
+    width: 100%;
+    background: #fff;
+}
+
+.pt-inner-container {
+    font-family: 'Poppins', sans-serif;
+    background: url(images/bg.png) no-repeat;
+    min-height: 500px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+.return-text p {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    padding-top: 0px;
+    color: #179ffa;
+}
+
+.pt-text-bold p {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 30px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    color: #364968;
+    padding-top: 0px;
+}
+.paytomorrow-logo {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    background: url(https://s3.amazonaws.com/cdn.paytomorrow.com/image/logo.png);
+    width: 230px;
+    height: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    display: block;
+    padding-top: 0px;
+}
+.pt-text-standard p {
+    font-family: 'Poppins', sans-serif;;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    color: #364968;
+    padding-top: 0px;
+}
+
+.apply-through-paytomorrow {
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.apply-through-paytomorrow-btn {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFF;
+    border-radius: 32px;
+    border: 0px solid #179ffa;
+    padding: 15px 45px 15px 45px;
+    background: #179ffa;
+    padding-top: 10px;
+}
+
+.apply-through-paytomorrow-btn:focus, .apply-through-paytomorrow-btn:hover {
+    font-family: 'Poppins', sans-serif;
+    color: #FFF;
+    border: 0px solid #179ffa;
+    background: #179ffa;
+    cursor: pointer;
+}
+
+@media only screen and (min-device-width: 1024px) {
+    body.pt-iframe-overlay {
+        position: relative !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .paytomorrow-logo {
+        width: 100%;
+    }
+
+    .modal {
+        max-width: 75%;
+    }
+
+    .return-text p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .pt-text-bold p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .pt-text-standard p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .apply-through-paytomorrow-btn {
+        font-size: 12px;
+        padding: 10px 20px 10px 20px;
+    }
+}
